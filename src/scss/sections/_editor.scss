@@ -1,0 +1,117 @@
+// BIG
+
+.editor-header{
+  @include center;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #635C73;
+  margin-top: 100px;
+}
+.editor-text{
+  @include center;
+  font-family: "Lato", sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  color: #323232;
+  margin-top: -20px;
+  width: 761px;
+  height: 64px;
+  margin-left: 215px;
+}
+.editor-buttons{
+  @include flex;
+  margin-left: 370px;
+  .editor-button{
+    margin-right: 20px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    background-color: #f0f4f7;
+    padding: 5px 5px 5px 5px;
+    .editor-button-views{
+      border: 1px solid lightslategrey;
+      background-color: white;
+      padding: 5px 7px 5px 5px;
+      margin-left: 5px;
+      margin-right: -6px;
+    }
+  }
+}
+
+// MEDIUM
+
+.editor-medium{
+  display: none;
+}
+.editor-header-medium{
+  font-size: 42px;
+  line-height: 44px;
+  margin-left: 30px;
+}
+.editor-text-medium{
+  width: 689px;
+  height: 58px;
+  font-size: 21px;
+  line-height: 32px;
+  margin-left: 50px;
+}
+.editor-buttons-medium{
+  margin-left: 200px;
+}
+@media screen and (max-width: 992px) and (min-width: 481px) {
+  .editor {
+    display: none;
+  }
+  .editor-medium {
+    display: block;
+  }
+}
+
+// SMALL
+
+.editor-small{
+  display: none;
+}
+.editor-header-small{
+  font-size: 26px;
+  width: 276px;
+  height: 46px;
+  line-height: 28px;
+  margin-left: 25px;
+}
+.editor-text-small{
+  width: 276px;
+  height: 74px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.editor-buttons-small{
+  font-size: 8px;
+  margin-left: 75px;
+}
+.editor-button-spec{
+  margin-left: 60px;
+}
+@media screen and (max-width: 480px) and (min-width: 320px){
+  .editor{
+    display: none;
+  }
+  .editor-medium{
+    display: none;
+  }
+  .editor-small{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1201px){
+  .editor-text{
+    padding-left: 350px;
+  }
+  .editor-buttons{
+    padding-left: 375px;
+  }
+}

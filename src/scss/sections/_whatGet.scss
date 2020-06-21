@@ -1,0 +1,159 @@
+
+// BIG
+
+.what-get{
+  background: #F4F4F4;
+  margin-top: 100px;
+  padding-bottom: 40px;
+}
+.list-blocks{
+  padding-top: 100px;
+}
+.list-block{
+  @include flex;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.list-block-img{
+  width: 90px;
+  height: 80px;
+}
+.list-block-info{
+  margin-left: 50px;
+  margin-top: -15px;
+}
+.list-block-title{
+  font-size: 16px;
+  color: #323232;
+}
+.list-block-text{
+  width: 390.89px;
+  height: 77px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #848E97;
+}
+.what-get-title{
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: #8D81AC;
+  text-align: center;
+  margin-left: 640px;
+  margin-top: -600px;
+}
+.what-get-img{
+  margin-left: 650px;
+  width: 540px;
+  height: 519px;
+}
+
+// MEDIUM
+
+.what-get-medium{
+  display: none;
+  padding-bottom: 40px;
+}
+.what-get-title-medium{
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: #8D81AC;
+  text-align: center;
+  margin-top: 150px;
+}
+.list-blocks-medium{
+  margin-top: -100px;
+}
+.get-img-medium{
+  margin-top: 80px;
+  margin-left: 240px;
+}
+.list-text-medium{
+  width: 562.89px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 21px;
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 481px) {
+  .what-get{
+    display: none;
+  }
+  .what-get-small{
+    display: none;
+  }
+  .what-get-medium{
+    display: block;
+  }
+}
+
+// SMALL
+
+.what-get-small{
+  display: none;
+  padding-bottom: 40px;
+  margin-top: -90px;
+}
+.what-get-title-small{
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #8D81AC;
+  text-align: center;
+  margin-top: 150px;
+}
+.block-title-small{
+  font-size: 16px;
+  line-height: 21px;
+}
+.blocks-medium{
+  margin-top: -100px;
+}
+.title-small-fix2{
+  margin-left: 18px;
+}
+.list-block-small{
+  margin-bottom: 50px;
+}
+.block-text-small{
+  width: 269px;
+  height: 77px;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  margin-left: -28px;
+}
+.title-small-fix{
+  margin-left: -20px;
+}
+.block-img-small{
+  margin-left: 105px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.get-img-small{
+  width: 300px;
+  height: 300px;
+  padding-left: 20px;
+}
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .what-get{
+    display: none;
+  }
+  .what-get-medium{
+    display: none;
+  }
+  .what-get-small{
+    display: block;
+  }
+}
+@media screen and (max-width: 1920px) and (min-width: 1201px){
+  .list-blocks{
+    margin-left: 400px;
+  }
+  .what-get-title{
+    padding-right: 310px;
+  }
+}
