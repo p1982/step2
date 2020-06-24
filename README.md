@@ -22,3 +22,6 @@
 3. Секция Revolutionary editor
 4. Секция Here is what you get
 5. Секция Fork subscription Pricing
+
+
+https://p1982.github.io/step2/?#
