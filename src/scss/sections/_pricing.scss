@@ -1,3 +1,6 @@
+@import "../_mixins.scss";
+@import '../_variables.scss';
+
 hr{
   width: 60px;
   height: 5px;
@@ -5,7 +8,7 @@ hr{
   border: 1px transparent;
 }
 .pricing{
-  background-image: url("/dist/img/price-bg.png");
+  background-image: url("../img/price-bg.png");
   padding-bottom: 100px;
   margin-top: -60px;
 }
@@ -118,7 +121,7 @@ hr{
 
 .pricing-medium{
   display: none;
-  background-image: url("/dist/img/price-bg.png");
+  background-image: url("../img/price-bg.png");
   margin-top: -50px;
   width: 780px;
   padding-bottom: 60px;
@@ -156,7 +159,7 @@ hr{
 
 .pricing-small{
   display: none;
-  background-image: url("/dist/img/price-bg.png");
+  background-image: url("../img/price-bg.png");
   width: 320px;
   padding-bottom: 45px;
 }
@@ -189,7 +192,7 @@ hr{
 @media screen and (max-width: 1920px) and (min-width: 1201px){
   .pricing{
     padding-top: 21px;
-    background-image: url("/dist/img/price-bg.png");
+    background-image: url("../img/price-bg.png");
   }
   .pricing-header{
     padding-left: 375px;

@@ -2,7 +2,7 @@
 @import '../variables';
 
 .section-container{
-  background: url('/dist/img/section-about-bg.png') no-repeat center left /cover;
+  background: url('../img/section-about-bg.png') no-repeat center left /cover;
 }
 
 .about-us-title{
@@ -33,45 +33,49 @@
 }
 
 .about-us-img-smashing{
-  width: 42vh;
+  width: 15vw;
   height: $height-about-us-big;
-  @include margin-about-us;
+  @include margin-about-us-left;
+  object-fit: $object-fit;
 }
 
 .about-us-img-codrops{
-  width: 42vh;
+  width: 15vw;
   height: $height-about-us-big;
-  @include margin-about-us;
+  @include margin-about-us-left;
+  object-fit: $object-fit;
 }
 
 .about-us-img-w{
   width: 5vw;
   height: $height-about-us-big;
   @include margin-about-us;
+  margin-left: 12vw;
+  object-fit: $object-fit;
 }
 
 .about-us-img-pixel{
   width: 18vw;
   height: 7vh;
-  margin-left: 5vw;
-  margin-bottom: 9vh;
-  margin-top: $margin-top-about-us-big;
+  margin-left: 3vw;
+  @include margin-about-us;
+  object-fit: $object-fit;
 }
 
 .about-us-img-bloq{
   width: 18vw;
   height: 7vh;
-  margin-left: 5vw;
-  margin-bottom: 9vh;
-  margin-top: $margin-top-about-us-big;
+  margin-left: 3vw;
+  @include margin-about-us;
+  object-fit: $object-fit;
 }
 
 .about-us-img-tnw{
-  width: 18vw;
+  width: 16vw;
   height: 7vh;
-  margin-left: 5vw;
-  margin-bottom: 9vh;
-  margin-top: $margin-top-about-us-big;
+  margin-left: 3vw;
+  @include margin-about-us;
+  object-fit: $object-fit;
 }
 
 .about-us-text{
@@ -93,7 +97,7 @@
   margin: 0;
 }
 
-.about-us-section-text:after{
+.about-us-section-text::after{
   position: $position-absolute;
   content: '';
   width: 85vw;
@@ -154,7 +158,6 @@
 
   .about-us-list{
     flex-direction: column;
-
   }
 
   .about-us-item{
@@ -163,7 +166,7 @@
 
   .about-us-img-smashing{
     width: 33vw;
-    margin-left: 25vw;
+    margin-left: 15vw;
     margin-bottom: 9vh;
     margin-top: 10vh;
 
@@ -171,7 +174,7 @@
 
   .about-us-img-codrops{
     width: 33vw;
-    margin-left: 25vw;
+    margin-left: 15vw;
     margin-bottom: 9vh;
     margin-top: 10vh;
 
@@ -179,28 +182,28 @@
 
   .about-us-img-w{
     width: 10vw;
-    margin-left: 38vw;
+    margin-left: 25vw;
     margin-bottom: 9vh;
     margin-top: 10vh;
 
   }
 
   .about-us-img-pixel{
-    margin-left: 25vw;
+    margin-left: 16vw;
     margin-bottom: 9vh;
     margin-top: 10vh;
     width: 35vw;
   }
 
   .about-us-img-bloq{
-    margin-left: 29vw;
+    margin-left: 18vw;
     margin-bottom: 9vh;
     margin-top: 10vh;
     width: 30vw;
   }
 
   .about-us-img-tnw{
-    margin-left: 35vw;
+    margin-left: 22vw;
     margin-bottom: 8vh;
     margin-top: 10vh;
   }

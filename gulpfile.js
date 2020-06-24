@@ -7,12 +7,12 @@ const gulpMinifycss = require("gulp-clean-css");
 const gulpImgmin = require("gulp-imagemin");
 const clean = require("gulp-clean");
 const uglify = require("gulp-uglify");
-
+const ghPages = require('gulp-gh-pages');
 gulp.task("browser-sync", function() {
     browserSync.init({
         server: {
-            baseDir: ".",
-            directory: true,
+            baseDir: "./dist",
+            // directory: true,
         },
         notify: false
     })
@@ -21,7 +21,7 @@ gulp.task("html", function () {
     return gulp
         .src("src/index.html")
         .pipe(gulp.dest("dist"))
-})
+});
 gulp.task("scss", function (){
     return gulp
         .src("src/scss/**/*.scss")
@@ -67,6 +67,10 @@ gulp.task("img", async function () {
         .pipe(gulpImgmin())
         .pipe(gulp.dest("dist/img"))
 });
-
-gulp.task("build", gulp.parallel("clean", "html", "modify", "js", "img"));
-gulp.task("dev", gulp.parallel("html", "modify", "js", "img", "browser-sync", "watch"));
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+});
+gulp.task("build", gulp.parallel("clean", "html", "modify", "js", "img", "browser-sync", "watch"));
+// gulp.task("dev", gulp.parallel("html", "modify", "js", "img", "browser-sync", "watch"));
+gulp.task('deploy');

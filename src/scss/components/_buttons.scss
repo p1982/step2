@@ -3,7 +3,7 @@
 
 .btn {
   background-color: $background-color-btn;
-  border: none;
+  border: 2px solid $background-color-btn;
   border-radius: 40px;
   color: #ffffff;
   @include center;
@@ -12,12 +12,13 @@
   font-weight: $font-weight;
   text-transform: $text-transform-capitalize;
   box-sizing: border-box;
+
 }
 
 .btn:hover{
   background-color: $background-color-hover;
   color: #8D81AC;
-  border: 2px solid #8D81AC;
+  border: 2px solid #8D81AC /inset;
   box-sizing: border-box;
 }
 
@@ -30,7 +31,7 @@
   @include center;
   padding: 23px 43px;
   position: $position-absolute;
-  bottom: -4vh;
+  bottom: -6vh;
   left: 40%;
 }
 
@@ -52,8 +53,8 @@
   }
 
   .download-btn {
-    bottom: -4vh;
-    left: 10%;
+    bottom: -5vh;
+    left: 13%;
     font-size: 18px;
     padding: 12px 15px;
   }

@@ -27,7 +27,11 @@
 }
 
 @mixin margin-about-us{
-  margin-left: $margin-left-about-us-big;
   margin-bottom: $margin-bottom-about-us-big;
   margin-top: $margin-top-about-us-big;
+}
+
+@mixin margin-about-us-left{
+  @include margin-about-us;
+  margin-left: $margin-left-about-us-big;
 }

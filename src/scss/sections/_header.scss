@@ -3,11 +3,13 @@
 
 .container-wrapper{
   margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px;
 }
 
 .header{
   position: $position-fixed;
-  width: $width;
+  width: 100vw;
   top: $top-start;
   left: $left-start;
   z-index: 50;
@@ -24,13 +26,9 @@
   background: rgba(0, 0, 0, 1);
 }
 
-.about-us{
-  background: url('/dist/img/header-img.png') no-repeat top left /cover;
-}
-
-.container-wrapper {
-  max-width: 1200px;
-  padding: 0 10px;
+.wrapper-container{
+  background: url('../img/header-img.png') no-repeat top left;
+  background-size: cover;
 }
 
 .header__body{
@@ -146,7 +144,7 @@
   font-size: $font-size-small;
   color: #848E97;
   position: $position-absolute;
-  bottom: -14vh;
+  bottom: -12vh;
   left: 43%;
 }
 
@@ -170,7 +168,7 @@
   }
 
   .medium {
-    display: $display-none;
+    display: block;
   }
 
   .small {
@@ -179,11 +177,15 @@
 
   .header__body-wrapper {
     @include space-between;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
 
   .header__menu {
     justify-content: space-evenly;
+  }
+
+  .header__item{
+    margin: 0;
   }
 
   .header__link {
@@ -222,14 +224,15 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .header:before {
     background: #27262A;
+    height: 25vh;
   }
 
   .wrapper-container {
-    background-image: url('/dist/img/header-img.png') no-repeat top left /cover;
+    background-image: url('../img/header-img.png') no-repeat top /cover;
   }
 
   .container-wrapper {
-    width: auto;
+    width: 80vw;
     position: $position-relative;
   }
 
@@ -275,7 +278,7 @@
     height: 22px;
     z-index: 5;
     background-color: #27262A;
-    top: 0.6vh;
+    top: -2vh;
     right: -29vw;
   }
 
@@ -284,7 +287,7 @@
     content: '';
     background-color: #ffffff;
     position: $position-absolute;
-    height: 3px;
+    height: $burger-line-height;
   }
 
   .header__burger:after {
@@ -294,7 +297,7 @@
   }
 
   .header__burger:before {
-    top: 24px;
+    top: 27px;
     width: 26px;
     right: 146px;;
   }
@@ -303,7 +306,7 @@
     position: $position-absolute;
     background-color: #ffffff;
     width: 26px;
-    height: 2px;
+    height: $burger-line-height;
     right: 146px;
     top: 18px;
     transition: all 0.3s ease 0s;
@@ -337,7 +340,7 @@
 
   .header__menu.active {
     background-color: #333333;
-    top: 28vh;
+    top: 24.7vh;
   }
 
   .header__list {
@@ -354,11 +357,21 @@
     margin-left: 0;
     border-bottom: 2px solid #848E97;
     list-style: $list-style;
+    position: $position-relative;
   }
 
   .header__item:hover {
-    border-left: 8px solid $color-hover-burger;
+    position: $position-relative;
+  }
 
+  .header__item:hover::before{
+    position: $position-absolute;
+    content: '';
+    width: 2vw;
+    height: 10vh;
+    background-color: $color-hover-burger;
+    top: 0.5vh;
+    left: 0;
   }
 
   .header__link {
@@ -376,7 +389,7 @@
 
   .header__body-wrapper {
     @include space-between;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
 
   .header__menu {
@@ -411,6 +424,6 @@
 
   .header-span {
     font-size: 15px;
-    left: 20%;
+    left: 15%;
   }
 }
