@@ -61,8 +61,17 @@
   color: $color-hover;
 }
 
+
+.header__logo .company-name:hover{
+  color: $color-hover;
+  text-decoration: none;
+}
+
+
 .header__img{
-  max-width: $width;
+  max-width: 70px;
+  background-image: url("../img/header-logo.png");
+  z-index: 51;
 }
 
 .company-name{

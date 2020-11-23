@@ -8,6 +8,7 @@ const gulpImgmin = require("gulp-imagemin");
 const clean = require("gulp-clean");
 const uglify = require("gulp-uglify");
 const ghPages = require('gulp-gh-pages');
+
 gulp.task("browser-sync", function() {
     browserSync.init({
         server: {
@@ -29,7 +30,7 @@ gulp.task("scss", function (){
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.reload({stream: true}))
 });
-gulp.task("js",async function () {
+gulp.task("js", function () {
     return gulp
          .src("src/js/*.js")
          .pipe(gulpConcat("common.min.js"))
@@ -47,12 +48,12 @@ gulp.task("code", function () {
         .src("*.html")
         .pipe(browserSync.reload({stream: true}))
 });
-gulp.task("clean", async function () {
+gulp.task("clean", function () {
     return gulp
         .src("dist/*", {read: false})
         .pipe(clean())
 });
-gulp.task("modify",async function () {
+gulp.task("modify", function () {
     return gulp
         .src("src/scss/**/*.scss")
         .pipe(gulpSass())
@@ -61,8 +62,8 @@ gulp.task("modify",async function () {
         .pipe(gulpMinifycss({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css"))
 });
-gulp.task("img", async function () {
-    gulp
+gulp.task("img",  function () {
+    return gulp
         .src("src/img/**/*")
         .pipe(gulpImgmin())
         .pipe(gulp.dest("dist/img"))
@@ -71,6 +72,6 @@ gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
 });
-gulp.task("build", gulp.parallel("clean", "html", "modify", "js", "img", "browser-sync", "watch"));
+gulp.task("build", gulp.series("clean", gulp.parallel("html", "modify", "js", "img"), "browser-sync", "watch"));
 // gulp.task("dev", gulp.parallel("html", "modify", "js", "img", "browser-sync", "watch"));
 gulp.task('deploy');

@@ -25,3 +25,15 @@
 
 
 https://p1982.github.io/step2/?#
+
+Student 1 Pavlo Iermakov
+1. Header
+2. Section about-us
+3. All variables
+4. Mixins - except for the first two
+5. Header branch
+6. Merge to master
+7. Site on github pages
+8. Js file for header
+9. Correction of the structure
+10. Buttons header
